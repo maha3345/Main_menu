@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cksd5jmngt0ot"]
+[gd_scene load_steps=11 format=3 uid="uid://cksd5jmngt0ot"]
 
 [ext_resource type="Texture2D" uid="uid://72j8hu16qjsa" path="res://IMG_20250611_163325.jpg" id="1_7vrkn"]
 [ext_resource type="Script" uid="uid://dm8q2vua8mhkv" path="res://main_menu.gd" id="1_fu7sn"]
 [ext_resource type="FontFile" uid="uid://b2fai142gnuef" path="res://GrapeSoda.ttf" id="2_7vrkn"]
-[ext_resource type="AudioStream" uid="uid://c48jl13sqxlxt" path="res://sword.mp3" id="4_jix8l"]
+[ext_resource type="AudioStream" uid="uid://d26po7q75tgs" path="res://sword.ogg" id="4_jix8l"]
+[ext_resource type="AudioStream" uid="uid://b1lxwpsu0mucr" path="res://hover.ogg" id="5_glbon"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
 texture = ExtResource("1_7vrkn")
@@ -114,6 +115,12 @@ vertical_alignment = 1
 [node name="ClickPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_jix8l")
 
+[node name="hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_glbon")
+
+[connection signal="mouse_entered" from="VBoxContainer/Button" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/Button2" to="." method="_on_button_2_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/Button3" to="." method="_on_button_3_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
