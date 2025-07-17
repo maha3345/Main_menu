@@ -3,7 +3,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	$VBoxContainer.get_child(0).grab_focus()
 
 func _on_button_pressed() -> void:
 	$ClickPlayer.play()
