@@ -5,6 +5,8 @@ extends Control
 @onready var sfx_toggle = $CenterContainer/VBoxContainer/SFXToggle
 @onready var back_button = $CenterContainer/VBoxContainer/BackButton
 @onready var hover = $hover
+@onready var music_player = $Mainmenumusic
+
 
 
 
@@ -15,6 +17,12 @@ func _ready():
 
 	# Set checkbox state
 	sfx_toggle.button_pressed = GlobalInput.sfx_enabled
+	
+	# Background music control
+	if GlobalInput.music_enabled:
+		music_player.play()
+	else:
+		music_player.stop()
 
 
 	# Connect UI signals
