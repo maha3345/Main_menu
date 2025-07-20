@@ -9,22 +9,23 @@ var sfx_enabled := true
 
 func _input(event):
 	# Go to Main menu on pressing "M"
-	if Input.is_action_just_pressed("go_to_menu"):
-		previous_scene_path = get_tree().current_scene.scene_file_path
-		get_tree().change_scene_to_file("res://main_menu.tscn")
-
-	# Exit game when double press "E" within 2 sec
-	elif Input.is_action_just_pressed("exit_game"):
-		var current_time = Time.get_ticks_msec() / 1000.0
-		if current_time - last_exit_time < 2.0:
-			get_tree().quit()
-		else:
-			last_exit_time = current_time
-			print("Press again to exit")
-
-	# Optional: Return to previous scene with "R"
-	elif Input.is_action_just_pressed("return_back"):
-		return_to_previous_scene()
+	#if Input.is_action_just_pressed("go_to_menu"):
+		#previous_scene_path = get_tree().current_scene.scene_file_path
+		#get_tree().change_scene_to_file("res://main_menu.tscn")
+#
+	## Exit game when double press "E" within 2 sec
+	#elif Input.is_action_just_pressed("exit_game"):
+		#var current_time = Time.get_ticks_msec() / 1000.0
+		#if current_time - last_exit_time < 2.0:
+			#get_tree().quit()
+		#else:
+			#last_exit_time = current_time
+			#print("Press again to exit")
+#
+	## Optional: Return to previous scene with "R"
+	#elif Input.is_action_just_pressed("return_back"):
+		#return_to_previous_scene()
+	pass
 
 func return_to_previous_scene():
 	if previous_scene_path != "":

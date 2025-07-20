@@ -1,12 +1,12 @@
 [gd_scene load_steps=13 format=3 uid="uid://cksd5jmngt0ot"]
 
 [ext_resource type="Texture2D" uid="uid://72j8hu16qjsa" path="res://IMG_20250611_163325.jpg" id="1_7vrkn"]
-[ext_resource type="Script" uid="uid://dm8q2vua8mhkv" path="res://main_menu.gd" id="1_fu7sn"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_fu7sn"]
 [ext_resource type="FontFile" uid="uid://b2fai142gnuef" path="res://GrapeSoda.ttf" id="2_7vrkn"]
 [ext_resource type="AudioStream" uid="uid://d26po7q75tgs" path="res://sword.ogg" id="4_jix8l"]
 [ext_resource type="AudioStream" uid="uid://b1lxwpsu0mucr" path="res://hover.ogg" id="5_glbon"]
 [ext_resource type="AudioStream" uid="uid://80xbnttq2o0c" path="res://hitman-chosiccom_9bfeU9RT.ogg" id="6_nlkkf"]
-[ext_resource type="Script" uid="uid://dabxt84a8mfi5" path="res://mainmenumusic.gd" id="7_qe12f"]
+[ext_resource type="Script" path="res://mainmenumusic.gd" id="7_qe12f"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
 texture = ExtResource("1_7vrkn")
@@ -24,41 +24,62 @@ bg_color = Color(0.239216, 0.141176, 0.0823529, 1)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fu7sn")
+metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = -576.0
-offset_top = -319.0
-offset_right = 576.0
-offset_bottom = 329.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_7vrkn")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0182292
+anchor_top = 0.132716
+anchor_right = 1.0075
+anchor_bottom = 1.13272
+offset_right = 12.3545
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.989276, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 0.588235)
+theme_override_constants/shadow_offset_y = 7
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 69
+text = "Mystery Game
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -82.0
-offset_top = 182.0
-offset_right = 104.0
-offset_bottom = 312.0
+anchors_preset = -1
+anchor_left = 0.426215
+anchor_top = 0.722222
+anchor_right = 0.587674
+anchor_bottom = 0.92284
 grow_horizontal = 2
 theme_override_constants/separation = 4
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.619608, 0.631373, 0.541176, 0.596078)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.619608, 0.631373, 0.541176, 0.596078)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/focus = SubResource("StyleBoxEmpty_7vrkn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
@@ -69,9 +90,9 @@ text = "Start game"
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.619608, 0.631373, 0.541176, 0.596078)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.619608, 0.631373, 0.541176, 0.596078)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/focus = SubResource("StyleBoxEmpty_7vrkn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
@@ -83,9 +104,9 @@ text = "Options
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0.619608, 0.631373, 0.541176, 0.596078)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.619608, 0.631373, 0.541176, 0.596078)
 theme_override_font_sizes/font_size = 20
 theme_override_styles/focus = SubResource("StyleBoxEmpty_7vrkn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
@@ -94,26 +115,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 text = "Exit
 "
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -218.0
-offset_top = 98.0
-offset_right = 270.0
-offset_bottom = 253.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(1, 1, 1, 0.588235)
-theme_override_constants/shadow_offset_y = 7
-theme_override_fonts/font = ExtResource("2_7vrkn")
-theme_override_font_sizes/font_size = 69
-text = "Mystery Game
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="ClickPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_jix8l")
 
@@ -121,6 +122,7 @@ stream = ExtResource("4_jix8l")
 stream = ExtResource("5_glbon")
 
 [node name="Mainmenumusic" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-14, 96)
 stream = ExtResource("6_nlkkf")
 parameters/looping = true
 script = ExtResource("7_qe12f")
