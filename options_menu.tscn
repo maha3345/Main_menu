@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bs8fnx6o2q68o"]
+[gd_scene load_steps=8 format=3 uid="uid://bs8fnx6o2q68o"]
 
 [ext_resource type="Script" uid="uid://bbo0cnt58tmi8" path="res://options_menu.gd" id="1_t1lix"]
 [ext_resource type="AudioStream" uid="uid://b1lxwpsu0mucr" path="res://hover.ogg" id="2_t1lix"]
+[ext_resource type="AudioStream" uid="uid://80xbnttq2o0c" path="res://hitman-chosiccom_9bfeU9RT.ogg" id="3_4gmlt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1lix"]
 bg_color = Color(0.85098, 0.709804, 0.423529, 1)
@@ -106,6 +107,10 @@ text = "Back"
 
 [node name="hover" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_t1lix")
+
+[node name="Mainmenumusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_4gmlt")
+parameters/looping = true
 
 [connection signal="mouse_entered" from="CenterContainer/VBoxContainer/SFXToggle" to="." method="_on_sfx_toggle_mouse_entered"]
 [connection signal="mouse_entered" from="CenterContainer/VBoxContainer/BackButton" to="." method="_on_back_button_mouse_entered"]

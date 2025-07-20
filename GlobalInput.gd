@@ -3,12 +3,23 @@ var previous_scene_path: String = ""
 var current_scene: Node = null
 var last_exit_time := 0.0 #Double press for exit
 
+<<<<<<< HEAD
+var music_enabled := true
+var sfx_enabled := true
+
+func _input(event):
+=======
 func _input(event):
 	#Go to Main menu on pressing"M" 
+>>>>>>> origin
 	if Input.is_action_just_pressed("go_to_menu"):
 		previous_scene_path=get_tree().current_scene.scene_file_path 
 		#save current scene path
 		get_tree().change_scene_to_file("res://main_menu.tscn")
+<<<<<<< HEAD
+	elif Input.is_action_just_pressed("exit_game"):
+		get_tree().quit()
+=======
 		
 	#Exit game when double press E within 2sec
 	elif Input.is_action_just_pressed("exit_game"):
@@ -30,3 +41,4 @@ func return_to_previous_scene():
 		
 		
 	
+>>>>>>> origin
