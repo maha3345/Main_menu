@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bs8fnx6o2q68o"]
 
-[ext_resource type="Script" path="res://options_menu.gd" id="1_t1lix"]
+[ext_resource type="Script" uid="uid://bbo0cnt58tmi8" path="res://options_menu.gd" id="1_t1lix"]
 [ext_resource type="AudioStream" uid="uid://b1lxwpsu0mucr" path="res://hover.ogg" id="2_t1lix"]
 [ext_resource type="AudioStream" uid="uid://80xbnttq2o0c" path="res://hitman-chosiccom_9bfeU9RT.ogg" id="3_4gmlt"]
 

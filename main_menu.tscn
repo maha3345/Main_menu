@@ -1,26 +1,52 @@
-[gd_scene load_steps=13 format=3 uid="uid://cksd5jmngt0ot"]
+[gd_scene load_steps=15 format=3 uid="uid://cksd5jmngt0ot"]
 
-[ext_resource type="Texture2D" uid="uid://72j8hu16qjsa" path="res://IMG_20250611_163325.jpg" id="1_7vrkn"]
-[ext_resource type="Script" path="res://main_menu.gd" id="1_fu7sn"]
+[ext_resource type="Script" uid="uid://dm8q2vua8mhkv" path="res://main_menu.gd" id="1_fu7sn"]
 [ext_resource type="FontFile" uid="uid://b2fai142gnuef" path="res://GrapeSoda.ttf" id="2_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://dk6u8aeyx1yfx" path="res://file_0000000076d861f5ab754b60aaa0c689.png" id="3_qe12f"]
 [ext_resource type="AudioStream" uid="uid://d26po7q75tgs" path="res://sword.ogg" id="4_jix8l"]
 [ext_resource type="AudioStream" uid="uid://b1lxwpsu0mucr" path="res://hover.ogg" id="5_glbon"]
 [ext_resource type="AudioStream" uid="uid://80xbnttq2o0c" path="res://hitman-chosiccom_9bfeU9RT.ogg" id="6_nlkkf"]
-[ext_resource type="Script" path="res://mainmenumusic.gd" id="7_qe12f"]
+[ext_resource type="Script" uid="uid://dabxt84a8mfi5" path="res://mainmenumusic.gd" id="7_qe12f"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
-texture = ExtResource("1_7vrkn")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlkkf"]
+bg_color = Color(0.168627, 0.105882, 0.054902, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7vrkn"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
-bg_color = Color(0.696788, 0.509732, 0.332466, 0)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dy7ct"]
+texture = ExtResource("3_qe12f")
+expand_margin_left = 20.0
+expand_margin_top = 80.0
+expand_margin_right = 20.0
+expand_margin_bottom = 91.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu7sn"]
 bg_color = Color(0.383729, 0.296362, 0.197918, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
-bg_color = Color(0.239216, 0.141176, 0.0823529, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8qtwp"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("3_qe12f")
+expand_margin_left = 20.0
+expand_margin_top = 80.0
+expand_margin_right = 20.0
+expand_margin_bottom = 91.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0o4t1"]
+texture = ExtResource("3_qe12f")
+expand_margin_left = 20.0
+expand_margin_top = 80.0
+expand_margin_right = 20.0
+expand_margin_bottom = 91.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qe12f"]
+texture = ExtResource("3_qe12f")
+expand_margin_left = 20.0
+expand_margin_top = 80.0
+expand_margin_right = 20.0
+expand_margin_bottom = 91.0
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -39,81 +65,90 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_7vrkn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nlkkf")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.0182292
-anchor_top = 0.132716
-anchor_right = 1.0075
-anchor_bottom = 1.13272
+anchor_left = 0.0381944
+anchor_top = 0.0432099
+anchor_right = 1.02747
+anchor_bottom = 1.03241
 offset_right = 12.3545
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.989276, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 0.588235)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/shadow_offset_y = 7
 theme_override_fonts/font = ExtResource("2_7vrkn")
-theme_override_font_sizes/font_size = 69
-text = "Mystery Game
+theme_override_font_sizes/font_size = 104
+text = "M	ystery game
+
 "
 horizontal_alignment = 1
-vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(120, 300)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.426215
-anchor_top = 0.722222
-anchor_right = 0.587674
-anchor_bottom = 0.92284
+anchor_left = 0.365451
+anchor_top = 0.504407
+anchor_right = 0.508681
+anchor_bottom = 0.708333
+offset_left = 13.0
+offset_top = -96.856
+offset_right = 150.0
+offset_bottom = 71.0
 grow_horizontal = 2
-theme_override_constants/separation = 4
+grow_vertical = 2
+theme_override_constants/separation = 14
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(120, 80)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0.619608, 0.631373, 0.541176, 0.596078)
-theme_override_font_sizes/font_size = 20
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
 theme_override_styles/focus = SubResource("StyleBoxEmpty_7vrkn")
-theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dy7ct")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fu7sn")
-theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
-text = "Start game"
+theme_override_styles/normal = SubResource("StyleBoxTexture_8qtwp")
+text = "START"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0.619608, 0.631373, 0.541176, 0.596078)
-theme_override_font_sizes/font_size = 20
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
 theme_override_styles/focus = SubResource("StyleBoxEmpty_7vrkn")
-theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0o4t1")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fu7sn")
-theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
-text = "Options
+theme_override_styles/normal = SubResource("StyleBoxTexture_qe12f")
+text = "OPTIONS
 "
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0.619608, 0.631373, 0.541176, 0.596078)
-theme_override_font_sizes/font_size = 20
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
 theme_override_styles/focus = SubResource("StyleBoxEmpty_7vrkn")
-theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0o4t1")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fu7sn")
-theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
-text = "Exit
-"
+theme_override_styles/normal = SubResource("StyleBoxTexture_qe12f")
+text = "EXIT"
 
 [node name="ClickPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_jix8l")
