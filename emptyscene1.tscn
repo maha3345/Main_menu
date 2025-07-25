@@ -1,11 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://8ao1a7sy36pl"]
+[gd_scene load_steps=12 format=3 uid="uid://8ao1a7sy36pl"]
 
 [ext_resource type="Script" uid="uid://cue5fy7ykoahx" path="res://pause_menu.gd" id="1_emd8a"]
-[ext_resource type="Texture2D" uid="uid://72j8hu16qjsa" path="res://IMG_20250611_163325.jpg" id="1_i2855"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uy5pb"]
-texture = ExtResource("1_i2855")
-modulate_color = Color(1, 1, 1, 0.313726)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6rtrq"]
+bg_color = Color(0.168627, 0.105882, 0.054902, 1)
 
 [sub_resource type="Gradient" id="Gradient_iyk57"]
 offsets = PackedFloat32Array(0.277612, 1)
@@ -16,7 +14,23 @@ gradient = SubResource("Gradient_iyk57")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_600cs"]
 texture = SubResource("GradientTexture1D_64wux")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4lwgy"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mkb7f"]
+bg_color = Color(0.164706, 0.164706, 0.164706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_adevn"]
+bg_color = Color(0.231373, 0.231373, 0.231373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wj2q8"]
+bg_color = Color(0.164706, 0.164706, 0.164706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l7d8h"]
+bg_color = Color(0.231373, 0.231373, 0.231373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1g2ge"]
+bg_color = Color(0.164706, 0.164706, 0.164706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5pq2u"]
+bg_color = Color(0.231373, 0.231373, 0.231373, 1)
 
 [node name="Emptyscene" type="Control"]
 layout_mode = 3
@@ -33,7 +47,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_uy5pb")
+theme_override_styles/panel = SubResource("StyleBoxFlat_6rtrq")
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="Panel"]
@@ -43,8 +57,10 @@ anchor_left = 0.423611
 anchor_top = 0.390432
 anchor_right = 0.609375
 anchor_bottom = 0.483025
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_styles/focus = SubResource("StyleBoxTexture_600cs")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_4lwgy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mkb7f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_adevn")
 text = "Resume"
 script = ExtResource("1_emd8a")
 metadata/_edit_use_anchors_ = true
@@ -56,8 +72,10 @@ anchor_left = 0.427951
 anchor_top = 0.533951
 anchor_right = 0.613715
 anchor_bottom = 0.626543
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_styles/focus = SubResource("StyleBoxTexture_600cs")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_4lwgy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wj2q8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_l7d8h")
 text = "Main Menu"
 script = ExtResource("1_emd8a")
 metadata/_edit_use_anchors_ = true
@@ -69,8 +87,10 @@ anchor_left = 0.431424
 anchor_top = 0.671296
 anchor_right = 0.617188
 anchor_bottom = 0.763889
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_styles/focus = SubResource("StyleBoxTexture_600cs")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_4lwgy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1g2ge")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5pq2u")
 text = "Exit"
 script = ExtResource("1_emd8a")
 metadata/_edit_use_anchors_ = true
