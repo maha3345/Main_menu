@@ -1,36 +1,39 @@
-[gd_scene load_steps=12 format=3 uid="uid://8ao1a7sy36pl"]
+[gd_scene load_steps=14 format=3 uid="uid://8ao1a7sy36pl"]
 
+[ext_resource type="Script" uid="uid://dlahcdi3y7uo2" path="res://emptyscene_1.gd" id="1_1g2ge"]
 [ext_resource type="Script" uid="uid://cue5fy7ykoahx" path="res://pause_menu.gd" id="1_emd8a"]
+[ext_resource type="Texture2D" uid="uid://dk6u8aeyx1yfx" path="res://file_0000000076d861f5ab754b60aaa0c689.png" id="1_mkb7f"]
+[ext_resource type="AudioStream" uid="uid://d26po7q75tgs" path="res://sword.ogg" id="3_l7d8h"]
+[ext_resource type="AudioStream" uid="uid://b1lxwpsu0mucr" path="res://hover.ogg" id="4_1g2ge"]
+[ext_resource type="AudioStream" uid="uid://80xbnttq2o0c" path="res://hitman-chosiccom_9bfeU9RT.ogg" id="5_5pq2u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6rtrq"]
 bg_color = Color(0.168627, 0.105882, 0.054902, 1)
 
-[sub_resource type="Gradient" id="Gradient_iyk57"]
-offsets = PackedFloat32Array(0.277612, 1)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_adevn"]
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_64wux"]
-gradient = SubResource("Gradient_iyk57")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_600cs"]
-texture = SubResource("GradientTexture1D_64wux")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wj2q8"]
+texture = ExtResource("1_mkb7f")
+expand_margin_left = 20.0
+expand_margin_top = 80.0
+expand_margin_right = 20.0
+expand_margin_bottom = 91.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mkb7f"]
 bg_color = Color(0.164706, 0.164706, 0.164706, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_adevn"]
-bg_color = Color(0.231373, 0.231373, 0.231373, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l7d8h"]
+texture = ExtResource("1_mkb7f")
+expand_margin_left = 20.0
+expand_margin_top = 80.0
+expand_margin_right = 20.0
+expand_margin_bottom = 91.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wj2q8"]
 bg_color = Color(0.164706, 0.164706, 0.164706, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l7d8h"]
-bg_color = Color(0.231373, 0.231373, 0.231373, 1)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1g2ge"]
 bg_color = Color(0.164706, 0.164706, 0.164706, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5pq2u"]
-bg_color = Color(0.231373, 0.231373, 0.231373, 1)
 
 [node name="Emptyscene" type="Control"]
 layout_mode = 3
@@ -39,6 +42,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1g2ge")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -51,50 +55,78 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_6rtrq")
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="Panel"]
+custom_minimum_size = Vector2(120, 80)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.423611
 anchor_top = 0.390432
 anchor_right = 0.609375
 anchor_bottom = 0.483025
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_styles/focus = SubResource("StyleBoxTexture_600cs")
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_adevn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wj2q8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_mkb7f")
-theme_override_styles/normal = SubResource("StyleBoxFlat_adevn")
-text = "Resume"
+theme_override_styles/normal = SubResource("StyleBoxTexture_l7d8h")
+text = "RESUME"
 script = ExtResource("1_emd8a")
 metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="Panel"]
+custom_minimum_size = Vector2(120, 80)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.427951
 anchor_top = 0.533951
 anchor_right = 0.613715
 anchor_bottom = 0.626543
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_styles/focus = SubResource("StyleBoxTexture_600cs")
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_adevn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wj2q8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_wj2q8")
-theme_override_styles/normal = SubResource("StyleBoxFlat_l7d8h")
-text = "Main Menu"
+theme_override_styles/normal = SubResource("StyleBoxTexture_l7d8h")
+text = "MAIN MENU"
 script = ExtResource("1_emd8a")
 metadata/_edit_use_anchors_ = true
 
 [node name="Button3" type="Button" parent="Panel"]
+custom_minimum_size = Vector2(120, 80)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.431424
 anchor_top = 0.671296
 anchor_right = 0.617188
 anchor_bottom = 0.763889
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_styles/focus = SubResource("StyleBoxTexture_600cs")
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_adevn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wj2q8")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_1g2ge")
-theme_override_styles/normal = SubResource("StyleBoxFlat_5pq2u")
-text = "Exit"
+theme_override_styles/normal = SubResource("StyleBoxTexture_l7d8h")
+text = "EXIT"
 script = ExtResource("1_emd8a")
 metadata/_edit_use_anchors_ = true
 
+[node name="ClickPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_l7d8h")
+
+[node name="hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_1g2ge")
+
+[node name="Mainmenumusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_5pq2u")
+parameters/looping = true
+
+[connection signal="mouse_entered" from="Panel/Button" to="Panel/Button" method="_on_mouse_entered"]
 [connection signal="pressed" from="Panel/Button" to="Panel/Button" method="on_continue"]
+[connection signal="mouse_entered" from="Panel/Button2" to="Panel/Button" method="_on_button_2_mouse_entered"]
 [connection signal="pressed" from="Panel/Button2" to="Panel/Button2" method="on_main"]
+[connection signal="mouse_entered" from="Panel/Button3" to="Panel/Button" method="_on_button_3_mouse_entered"]
 [connection signal="pressed" from="Panel/Button3" to="Panel/Button" method="on_exit"]
