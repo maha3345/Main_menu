@@ -1,6 +1,6 @@
 extends Control
 
-@onready var music_player = $Mainmenumusic  # <- This matches your node name!
+@onready var music_player = $Mainmenumusic  
 
 func _ready():
 	$VBoxContainer.get_child(0).grab_focus()
